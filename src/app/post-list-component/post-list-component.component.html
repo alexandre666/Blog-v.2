@@ -1,0 +1,10 @@
+<li [ngClass]="{'list-group': poststatus === 'white',
+                'list-group-item-success': poststatus === 'green',
+                'list-group-item-danger': poststatus === 'red'}" style="list-style: none">
+  <p style="text-align: right">Mis à jour : {{ created_at | date: 'short' }}</p>
+  <h2>{{postTitle}}</h2>
+  <h4>{{postContent}}</h4>
+  <button class="btn btn-success" (click)="LoveIt()">ILoveIt!</button>
+  <button class="btn btn-success" (click)="DontLoveIt()">Don'tLoveIt!</button>
+</li>
+
